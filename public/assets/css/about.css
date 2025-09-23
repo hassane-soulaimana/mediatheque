@@ -1,0 +1,62 @@
+/* Styles spécifiques à la page À propos */
+.about-section {
+  padding: 3rem 0;
+}
+.about-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.about-main {
+  flex: 2;
+  min-width: 0;
+}
+.about-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.about-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+  flex: 1;
+  min-width: 180px;
+}
+.about-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.about-sidebar {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+.info-box {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 900px) {
+  .about-flex {
+    flex-direction: column;
+  }
+  .about-sidebar {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .about-cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-card {
+    min-width: 0;
+    width: 100%;
+  }
+  .about-section {
+    padding: 1.5rem 0;
+  }
+}

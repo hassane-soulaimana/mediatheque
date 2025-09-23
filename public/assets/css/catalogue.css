@@ -1,0 +1,252 @@
+/* --- STYLE GÉNÉRAL --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* --- FORMULAIRE DE RECHERCHE --- */
+form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 auto 30px auto;
+    max-width: 900px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+form input[type="text"],
+form select {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    min-width: 140px;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* --- GRILLE DU CATALOGUE --- */
+.catalogue-grid-cat {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* --- CARTES DE MÉDIA --- */
+.catalogue-card-cat {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.catalogue-card-cat:hover {
+    transform: translateY(-5px);
+}
+
+/* Images */
+.catalogue-card-cat img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Textes */
+.catalogue-card-cat h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    min-height: 2.6em;
+}
+
+.catalogue-card-cat p {
+    font-size: 0.9rem;
+    margin: 0 0 6px 0;
+    color: #555;
+}
+
+/* Actions (boutons) */
+.card-actions-cat {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.btn-cat, .btn-emprunts-cat {
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-size: 0.95rem;
+}
+
+.btn-cat {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.btn-cat:hover {
+    background-color: #2c3e50;
+}
+
+.btn-emprunts-cat {
+    background-color: #2980b9;
+    color: white;
+}
+
+.btn-emprunts-cat:hover {
+    background-color: #2980b9;
+    
+}
+
+.btn-emprunts-cat:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Indicateur de disponibilité */
+.availability {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.available {
+    background-color: #2ecc71;
+}
+
+.borrowed {
+    background-color: #e74c3c;
+}
+
+.stock {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-left: 5px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px;
+    gap: 8px;
+}
+
+.pagination a {
+    padding: 8px 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #3498db;
+    transition: all 0.2s;
+}
+
+.pagination a.active,
+.pagination a:hover {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* Message quand aucun média */
+.no-media {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 40px 0;
+    color: #7f8c8d;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .catalogue-grid-cat {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    form input[type="text"],
+    form select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogue-grid-cat {
+        grid-template-columns: 1fr;
+    }
+    
+    body {
+        padding: 15px;
+    }
+}

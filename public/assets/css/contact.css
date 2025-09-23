@@ -1,0 +1,65 @@
+/* Styles spécifiques à la page Contact */
+.contact-section {
+  padding: 3rem 0;
+}
+.contact-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.contact-main {
+  flex: 2;
+  min-width: 0;
+}
+.contact-sidebar {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+.info-box {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.contact-form {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.contact-form label {
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contact-form button.btn-contact {
+  background: #2b7cff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button.btn-contact:hover {
+  background: #1a5bb8;
+}
+@media (max-width: 900px) {
+  .contact-flex {
+    flex-direction: column;
+  }
+  .contact-sidebar {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
